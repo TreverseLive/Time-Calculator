@@ -63,7 +63,6 @@
             this.rateCalculateButton = new System.Windows.Forms.Button();
             this.payNum = new System.Windows.Forms.Label();
             this.payLabel = new System.Windows.Forms.Label();
-            this.timeframeCalculateButton = new System.Windows.Forms.Button();
             this.timeframeResultSecond = new System.Windows.Forms.Label();
             this.timeframeResultSecondLabel = new System.Windows.Forms.Label();
             this.timeframeResultMinute = new System.Windows.Forms.Label();
@@ -116,9 +115,7 @@
             this.startingDay = new System.Windows.Forms.TextBox();
             this.startingMonth = new System.Windows.Forms.TextBox();
             this.timeRotateButton = new System.Windows.Forms.Button();
-            this.resultingTimeCalculate = new System.Windows.Forms.Button();
-            this.timeframeResultAMPM = new System.Windows.Forms.Label();
-            this.timeframeResultAMPMLabel = new System.Windows.Forms.Label();
+            this.calculateDurationButton = new System.Windows.Forms.Button();
             this.versionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -186,7 +183,7 @@
             // addRadio
             // 
             this.addRadio.AutoSize = true;
-            this.addRadio.Location = new System.Drawing.Point(217, 137);
+            this.addRadio.Location = new System.Drawing.Point(140, 137);
             this.addRadio.Name = "addRadio";
             this.addRadio.Size = new System.Drawing.Size(59, 17);
             this.addRadio.TabIndex = 5;
@@ -197,7 +194,7 @@
             // subtractRadio
             // 
             this.subtractRadio.AutoSize = true;
-            this.subtractRadio.Location = new System.Drawing.Point(331, 137);
+            this.subtractRadio.Location = new System.Drawing.Point(261, 137);
             this.subtractRadio.Name = "subtractRadio";
             this.subtractRadio.Size = new System.Drawing.Size(77, 17);
             this.subtractRadio.TabIndex = 6;
@@ -432,17 +429,6 @@
             this.payLabel.TabIndex = 32;
             this.payLabel.Text = "Pay";
             // 
-            // timeframeCalculateButton
-            // 
-            this.timeframeCalculateButton.Font = new System.Drawing.Font("Carter One", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeframeCalculateButton.Location = new System.Drawing.Point(614, 217);
-            this.timeframeCalculateButton.Name = "timeframeCalculateButton";
-            this.timeframeCalculateButton.Size = new System.Drawing.Size(147, 23);
-            this.timeframeCalculateButton.TabIndex = 23;
-            this.timeframeCalculateButton.Text = "Calculate Time Between";
-            this.timeframeCalculateButton.UseVisualStyleBackColor = true;
-            this.timeframeCalculateButton.Click += new System.EventHandler(this.timeframeCalculateButton_Click);
-            // 
             // timeframeResultSecond
             // 
             this.timeframeResultSecond.AutoSize = true;
@@ -470,7 +456,6 @@
             this.timeframeResultMinute.Size = new System.Drawing.Size(13, 13);
             this.timeframeResultMinute.TabIndex = 52;
             this.timeframeResultMinute.Text = "0";
-            this.timeframeResultMinute.Click += new System.EventHandler(this.timeframeResultMinute_Click);
             // 
             // timeframeResultMinuteLabel
             // 
@@ -634,7 +619,6 @@
             this.startingTimeHour.Name = "startingTimeHour";
             this.startingTimeHour.Size = new System.Drawing.Size(100, 20);
             this.startingTimeHour.TabIndex = 13;
-            this.startingTimeHour.TextChanged += new System.EventHandler(this.startingTimeHour_TextChanged);
             // 
             // startingAMPM
             // 
@@ -928,44 +912,25 @@
             this.timeRotateButton.UseVisualStyleBackColor = true;
             this.timeRotateButton.Click += new System.EventHandler(this.timeRotateButton_Click);
             // 
-            // resultingTimeCalculate
+            // calculateDurationButton
             // 
-            this.resultingTimeCalculate.Font = new System.Drawing.Font("Carter One", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultingTimeCalculate.Location = new System.Drawing.Point(799, 218);
-            this.resultingTimeCalculate.Name = "resultingTimeCalculate";
-            this.resultingTimeCalculate.Size = new System.Drawing.Size(138, 23);
-            this.resultingTimeCalculate.TabIndex = 24;
-            this.resultingTimeCalculate.Text = "Calculate Date-Time";
-            this.resultingTimeCalculate.UseVisualStyleBackColor = true;
-            this.resultingTimeCalculate.Click += new System.EventHandler(this.resultingTimeCalculate_Click);
-            // 
-            // timeframeResultAMPM
-            // 
-            this.timeframeResultAMPM.AutoSize = true;
-            this.timeframeResultAMPM.Location = new System.Drawing.Point(956, 271);
-            this.timeframeResultAMPM.Name = "timeframeResultAMPM";
-            this.timeframeResultAMPM.Size = new System.Drawing.Size(44, 13);
-            this.timeframeResultAMPM.TabIndex = 116;
-            this.timeframeResultAMPM.Text = "AM/PM";
-            // 
-            // timeframeResultAMPMLabel
-            // 
-            this.timeframeResultAMPMLabel.AutoSize = true;
-            this.timeframeResultAMPMLabel.Font = new System.Drawing.Font("Carter One", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeframeResultAMPMLabel.Location = new System.Drawing.Point(955, 253);
-            this.timeframeResultAMPMLabel.Name = "timeframeResultAMPMLabel";
-            this.timeframeResultAMPMLabel.Size = new System.Drawing.Size(45, 17);
-            this.timeframeResultAMPMLabel.TabIndex = 115;
-            this.timeframeResultAMPMLabel.Text = "AM/PM";
+            this.calculateDurationButton.Font = new System.Drawing.Font("Carter One", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateDurationButton.Location = new System.Drawing.Point(661, 218);
+            this.calculateDurationButton.Name = "calculateDurationButton";
+            this.calculateDurationButton.Size = new System.Drawing.Size(160, 23);
+            this.calculateDurationButton.TabIndex = 24;
+            this.calculateDurationButton.Text = "Calculate Time Between";
+            this.calculateDurationButton.UseVisualStyleBackColor = true;
+            this.calculateDurationButton.Click += new System.EventHandler(this.calculateDurationButton_Click);
             // 
             // versionLabel
             // 
             this.versionLabel.AutoSize = true;
             this.versionLabel.Location = new System.Drawing.Point(956, 627);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(128, 13);
+            this.versionLabel.Size = new System.Drawing.Size(119, 13);
             this.versionLabel.TabIndex = 117;
-            this.versionLabel.Text = "Version 1.3.1 by Treverse";
+            this.versionLabel.Text = "Version 1.4 by Treverse";
             // 
             // timeCalculatorForm
             // 
@@ -973,9 +938,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 649);
             this.Controls.Add(this.versionLabel);
-            this.Controls.Add(this.timeframeResultAMPM);
-            this.Controls.Add(this.timeframeResultAMPMLabel);
-            this.Controls.Add(this.resultingTimeCalculate);
+            this.Controls.Add(this.calculateDurationButton);
             this.Controls.Add(this.timeRotateButton);
             this.Controls.Add(this.dateCalculateButton);
             this.Controls.Add(this.dateResultYear);
@@ -1007,7 +970,6 @@
             this.Controls.Add(this.startingDays);
             this.Controls.Add(this.endingAMPM);
             this.Controls.Add(this.startingAMPM);
-            this.Controls.Add(this.timeframeCalculateButton);
             this.Controls.Add(this.timeframeResultSecond);
             this.Controls.Add(this.timeframeResultSecondLabel);
             this.Controls.Add(this.timeframeResultMinute);
@@ -1108,7 +1070,6 @@
         private System.Windows.Forms.Button rateCalculateButton;
         private System.Windows.Forms.Label payNum;
         private System.Windows.Forms.Label payLabel;
-        private System.Windows.Forms.Button timeframeCalculateButton;
         private System.Windows.Forms.Label timeframeResultSecondLabel;
         private System.Windows.Forms.Label timeframeResultMinute;
         private System.Windows.Forms.Label timeframeResultMinuteLabel;
@@ -1161,9 +1122,7 @@
         private System.Windows.Forms.TextBox startingDay;
         private System.Windows.Forms.TextBox startingMonth;
         private System.Windows.Forms.Button timeRotateButton;
-        private System.Windows.Forms.Button resultingTimeCalculate;
-        private System.Windows.Forms.Label timeframeResultAMPM;
-        private System.Windows.Forms.Label timeframeResultAMPMLabel;
+        private System.Windows.Forms.Button calculateDurationButton;
         private System.Windows.Forms.Label versionLabel;
     }
 }
