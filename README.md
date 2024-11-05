@@ -9,3 +9,5 @@ I developed this Time Calculator simply out of necessity. There were tons of tim
 **Hourly Rate Calculator:** *Knowing how much you should be paid is CRUCIAL. If you know how many hours you worked, as well as your hourly wage, you can easily calculate exactly how much you should be paid, down to the last second!*
 
 **Date Calculator:** *How far apart are these two dates? Or, how long are these two dates, combined? This calculator will do that math for you!*
+
+![image](https://github.com/user-attachments/assets/c8bb25f5-2c43-4958-aa3a-05d9a1cfb101)
