@@ -3,7 +3,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace EditingRates
+namespace TimeCalculator
 {
     public partial class timeCalculatorForm : Form
     {
@@ -176,6 +176,25 @@ namespace EditingRates
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void treverseHyperlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // The URL to open
+            string url = "https://treverse.live/socials";
+
+            try
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // For .NET Core 3.0 and above
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to open link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

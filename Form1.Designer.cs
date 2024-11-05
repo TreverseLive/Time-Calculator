@@ -1,4 +1,4 @@
-﻿namespace EditingRates
+﻿namespace TimeCalculator
 {
     partial class timeCalculatorForm
     {
@@ -117,6 +117,7 @@
             this.timeRotateButton = new System.Windows.Forms.Button();
             this.calculateDurationButton = new System.Windows.Forms.Button();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.treverseHyperlink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // startingHours
@@ -413,7 +414,7 @@
             // payNum
             // 
             this.payNum.AutoSize = true;
-            this.payNum.Location = new System.Drawing.Point(186, 572);
+            this.payNum.Location = new System.Drawing.Point(193, 572);
             this.payNum.Name = "payNum";
             this.payNum.Size = new System.Drawing.Size(13, 13);
             this.payNum.TabIndex = 33;
@@ -926,17 +927,31 @@
             // versionLabel
             // 
             this.versionLabel.AutoSize = true;
-            this.versionLabel.Location = new System.Drawing.Point(956, 627);
+            this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versionLabel.Location = new System.Drawing.Point(934, 605);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(119, 13);
+            this.versionLabel.Size = new System.Drawing.Size(91, 16);
             this.versionLabel.TabIndex = 117;
-            this.versionLabel.Text = "Version 1.4 by Treverse";
+            this.versionLabel.Text = "Version 1.4 by";
+            // 
+            // treverseHyperlink
+            // 
+            this.treverseHyperlink.AutoSize = true;
+            this.treverseHyperlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treverseHyperlink.Location = new System.Drawing.Point(1022, 605);
+            this.treverseHyperlink.Name = "treverseHyperlink";
+            this.treverseHyperlink.Size = new System.Drawing.Size(62, 16);
+            this.treverseHyperlink.TabIndex = 118;
+            this.treverseHyperlink.TabStop = true;
+            this.treverseHyperlink.Text = "Treverse";
+            this.treverseHyperlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.treverseHyperlink_LinkClicked);
             // 
             // timeCalculatorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 649);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1088, 626);
+            this.Controls.Add(this.treverseHyperlink);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.calculateDurationButton);
             this.Controls.Add(this.timeRotateButton);
@@ -1124,6 +1139,7 @@
         private System.Windows.Forms.Button timeRotateButton;
         private System.Windows.Forms.Button calculateDurationButton;
         private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.LinkLabel treverseHyperlink;
     }
 }
 
