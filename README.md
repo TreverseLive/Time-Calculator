@@ -1,4 +1,4 @@
-# EditingRates
+# Time Calculator
 
 I developed this Time Calculator simply out of necessity. There were tons of time calculators out there, but I could never find one that had everything I needed. So, I made it myself! This program features:
 
